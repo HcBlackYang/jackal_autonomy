@@ -1,6 +1,6 @@
 # ME5413 Final Project - Group 13
 
-> **Authors:** [Blake Yang](https://github.com/HcBlackYang), [LINJIE](https://github.com/LINJIE-WANG)
+> **Authors:** [HAOCHUAN](https://github.com/HcBlackYang), [LINJIE](https://github.com/LINJIE-WANG)，[KEHAN](https://github.com/Rosmarinus33), [LINYI](https://github.com/GaoLinyi552), [GAOXIANG](https://github.com/niguo-xg) and [PEILONG](https://github.com/H-PL888)
 
 ![Ubuntu 20.04](https://img.shields.io/badge/OS-Ubuntu_20.04-informational?style=flat&logo=ubuntu&logoColor=white&color=2bbc8a)
 ![ROS Noetic](https://img.shields.io/badge/Tools-ROS_Noetic-informational?style=flat&logo=ROS&logoColor=white&color=2bbc8a)
@@ -26,7 +26,7 @@ This project is part of the NUS ME5413 module. Our objective is to build a fully
   <img src="src/me5413_world/media/gz_world.png" alt="evo Image 1" width="600"/>
 </p>
 
-<p align="center"><b>Figure 1:</b> Overview </p>
+
 
 Demo：
 
@@ -100,8 +100,26 @@ jsk_rviz_plugins
 
 ## 🏗️ Gazebo Models
 
-- **Gazebo Official Models**
-- **Customized Models**
+* [Gazebo official models](https://github.com/osrf/gazebo_models)
+  
+  ```bash
+  # Create the destination directory
+  cd
+  mkdir -p .gazebo/models
+
+  # Clone the official gazebo models repo (assuming home here `~/`)
+  git clone https://github.com/osrf/gazebo_models.git
+
+  # Copy the models into the `~/.gazebo/models` directory
+  cp -r ~/gazebo_models/* ~/.gazebo/models
+  ```
+
+* [Our customized models](https://github.com/NUS-Advanced-Robotics-Centre/ME5413_Final_Project/tree/main/src/me5413_world/models)
+
+  ```bash
+  # Copy the customized models into the `~/.gazebo/models` directory
+  cp -r ~/ME5413_Final_Project/src/me5413_world/models/* ~/.gazebo/models
+  ```
 
 
 
@@ -111,7 +129,7 @@ jsk_rviz_plugins
 ```bash
 # Clone the repository
 cd ~
-git clone https://github.com/<YOUR_USERNAME>/ME5413_Final_Project.git
+git clone https://github.com/<YOUR_USERNAME>/Jackal_automay.git
 cd ME5413_Final_Project
 
 # Install ROS dependencies
@@ -168,11 +186,20 @@ roscd me5413_world/maps/
 rosrun map_server map_saver -f my_map map:=/map
 ```
 
+<p align="center">
+  <img src="src/me5413_world/media/report_image_12.png" alt="evo Image 1" width="500"/>
+</p>
+
+
 ### 3. Navigation
 
 ```bash
 roslaunch me5413_world navigation.launch
 ```
+
+<p align="center">
+  <img src="src/me5413_world/media/report_image_18.png" alt="evo Image 1" width="500"/>
+</p>
 
 Make sure `my_map.yaml` is loaded and AMCL is active.
 
@@ -190,7 +217,6 @@ Make sure `my_map.yaml` is loaded and AMCL is active.
 
 
 ## 📊 Trajectory Evaluation Using `evo`
-
 
 
 <p align="center">
@@ -249,7 +275,8 @@ We follow:
 
 For in-depth explanation and results, refer to:
 
-**`report13_draft_修正.docx`**
+[report.pdf](src/me5413_world/media/Group13_Report.pdf)
+
 
 
 
