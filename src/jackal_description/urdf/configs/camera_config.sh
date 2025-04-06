@@ -1,0 +1,4 @@
+#!/bin/bash
+export JACKAL_FLEA3=0
+export JACKAL_STEREO_FLEA3=1
+export JACKAL_FLEA3_TILT="0"

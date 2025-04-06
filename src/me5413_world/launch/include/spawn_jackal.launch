@@ -1,4 +1,5 @@
 <launch>
+
   <!-- Configuration of Jackal which you would like to simulate.
        See jackal_description for details. -->
   <arg name="config" default="base" />

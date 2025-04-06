@@ -19,6 +19,22 @@
     </plugin>
   </gazebo>
 
+  <!-- <gazebo>
+    <plugin name="imu_controller" filename="libhector_gazebo_ros_imu.so">
+      <robotNamespace>/</robotNamespace>
+      <updateRate>50.0</updateRate>
+      <bodyName>imu_link</bodyName>
+      <topicName>imu/data</topicName>
+      <accelDrift>0 0 0</accelDrift>
+      <accelGaussianNoise>0 0 0</accelGaussianNoise>
+      <rateDrift>0 0 0</rateDrift>
+      <rateGaussianNoise>0 0 0</rateGaussianNoise>
+      <headingDrift>0</headingDrift>
+      <headingGaussianNoise>0</headingGaussianNoise>
+    </plugin>
+  </gazebo> -->
+
+
   <gazebo>
     <plugin name="imu_controller" filename="libhector_gazebo_ros_imu.so">
       <robotNamespace>/</robotNamespace>

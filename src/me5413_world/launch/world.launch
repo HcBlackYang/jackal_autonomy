@@ -18,4 +18,11 @@
     <!-- Load the destination configuration -->
     <rosparam command="load" file="$(find me5413_world)/config/config.yaml" />
 
+    <!-- stereo_image_process
+    <node pkg="stereo_image_proc"
+      type="stereo_image_proc"
+      name="stereo_proc"
+      ns="/front"
+      output="screen" /> -->
+
 </launch>

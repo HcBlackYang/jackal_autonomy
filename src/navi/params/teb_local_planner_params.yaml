@@ -1,0 +1,59 @@
+TebLocalPlannerROS:
+
+  odom_topic: odom               # 里程计话题，通常为 "odom"
+  map_frame: map                # 规划参考坐标系，一般设为 odom
+
+  # Trajectory 轨迹相关
+  teb_autosize: true             # 自动调整轨迹时间长度
+  dt_ref: 0.3                    # 建议的轨迹时间分辨率
+  dt_hysteresis: 0.1            # 控制轨迹时间步长变化的灵敏度
+  max_samples: 500              # 轨迹中最多的时间样本数
+
+  global_plan_overwrite_orientation: true   # 用全局路径的方向覆盖本地路径方向
+  allow_init_with_backwards_motion: false   # 初始是否允许倒退运动
+  max_global_plan_lookahead_dist: 3.0       # 最大全局路径前瞻距离
+
+  # Robot Configuration 机器人参数
+  max_vel_x: 1                 # 最大x方向线速度
+  max_vel_x_backwards: 0.5     # 最大后退速度
+  max_vel_theta: 1.57            # 最大角速度
+  acc_lim_x: 5                # 最大x方向加速度
+  acc_lim_theta: 2            # 最大角加速度
+
+  # Robot footprint (choose one)
+  footprint_model: 
+    type: "polygon"  # 机器人模型类型：circular / line / two_circles / polygon
+    vertices:        # 机器人外形的四个角点（顺时针或逆时针都可以）
+      - [-0.21, -0.165]
+      - [-0.21,  0.165]
+      - [ 0.21,  0.165]
+      - [ 0.21, -0.165]
+
+  # GoalTolerance 目标容差
+  xy_goal_tolerance: 0.1        # 到达目标点的 xy 容差
+  yaw_goal_tolerance: 0.05       # 到达目标点的角度容差
+  free_goal_vel: false          # 到达目标点时是否允许有速度
+
+  # Obstacles 障碍物相关
+  min_obstacle_dist: 0.15     # 与障碍物保持的最小距离
+  inflation_dist: 0.25           # 膨胀距离，用于提前避障
+  include_costmap_obstacles: true   # 是否考虑代价地图中的障碍物
+  costmap_obstacles_behind_robot_dist: 1.0  # 考虑机器人后方多远的障碍物
+  obstacle_poses_affected: 30   # 每个障碍物影响的轨迹样本点数
+
+  # Optimization 优化参数
+  no_inner_iterations: 5        # 每次优化迭代的内部循环次数
+  no_outer_iterations: 4        # 外部优化循环次数
+  optimization_activate: true   # 是否开启优化
+  optimization_verbose: false   # 是否打印优化详细信息
+  penalty_epsilon: 0.1          # 平滑项的惩罚区间
+
+  # Homotopy Class Planning 多路径规划（可选）
+  enable_homotopy_class_planning: false     # 是否启用多拓扑路径规划
+  enable_multithreading: true               # 是否多线程
+  max_number_classes: 4                     # 最多保留几种不同路径拓扑
+
+  # Recovery 恢复行为相关（如遇障碍无法前进）
+  shrink_horizon_backup: true       # 是否在无法前进时缩小局部路径范围
+  shrink_horizon_min_duration: 10.0 # 最小缩小路径的持续时间
+

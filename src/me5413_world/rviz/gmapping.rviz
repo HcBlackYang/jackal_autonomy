@@ -6,7 +6,9 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /RobotModel1
         - /Sensing1
+        - /Sensing1/Image1
         - /Localization1
       Splitter Ratio: 0.5117647051811218
     Tree Height: 420
@@ -72,11 +74,6 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        front_camera:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         front_camera_beam:
           Alpha: 1
           Show Axes: false
@@ -87,11 +84,25 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        front_camera_optical:
+        front_fender_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        front_fender_link:
+          Value: true
+        front_frame_optical:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        front_kinect:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        front_laser:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        front_laser_mount:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -171,15 +182,6 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        tim551:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        tim551_mount_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
         velodyne:
           Alpha: 1
           Show Axes: false
@@ -233,7 +235,7 @@ Visualization Manager:
           fixed_frame_orientation: true
         - Class: rviz/Image
           Enabled: true
-          Image Topic: /front/image_raw
+          Image Topic: /front/rgb/image_raw
           Max Value: 1
           Median window: 5
           Min Value: 0
@@ -246,8 +248,8 @@ Visualization Manager:
         - Alpha: 1
           Autocompute Intensity Bounds: true
           Autocompute Value Bounds:
-            Max Value: 9.14406681060791
-            Min Value: -0.8228924870491028
+            Max Value: 23.425579071044922
+            Min Value: -1.0747497081756592
             Value: true
           Axis: X
           Channel Name: intensity
@@ -274,8 +276,8 @@ Visualization Manager:
         - Alpha: 1
           Autocompute Intensity Bounds: true
           Autocompute Value Bounds:
-            Max Value: 4.77785587310791
-            Min Value: -0.07101771235466003
+            Max Value: 2.3340635299682617
+            Min Value: -0.07009509205818176
             Value: true
           Axis: Z
           Channel Name: intensity
@@ -360,7 +362,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/ThirdPersonFollower
-      Distance: 4
+      Distance: 9.67296028137207
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
