@@ -129,14 +129,14 @@ jsk_rviz_plugins
 ```bash
 # Clone the repository
 cd ~
-git clone https://github.com/<YOUR_USERNAME>/Jackal_automay.git
+git clone https://github.com/HcBlackYang/jackal_autonomy.git
 cd ME5413_Final_Project
 
 # Install ROS dependencies
 rosdep install --from-paths src --ignore-src -r -y
 
 # Build the workspace
-catkin_make
+catkin_build
 source devel/setup.bash
 ```
 
