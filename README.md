@@ -10,7 +10,6 @@
 
 
 ## 📌 Project Overview
-___
 
 This project is part of the NUS ME5413 module. Our objective is to build a fully functional ROS system using a Jackal robot in a Gazebo simulated world. The system is capable of:
 
@@ -41,7 +40,7 @@ Demo：
 
 
 ## 🧠 System Architecture
-___
+
 
 Our system is composed of **7 functional modules**:
 
@@ -58,7 +57,7 @@ Our system is composed of **7 functional modules**:
 
 
 ## 📂 Repo Structure
-___
+
 
 This repository is organized as a `catkin` workspace and contains three major packages:
 
@@ -71,7 +70,7 @@ This repository is organized as a `catkin` workspace and contains three major pa
 
 
 ## ⚙️ Dependencies
-___
+
 
 ### System Requirements
 
@@ -84,7 +83,6 @@ ___
 - `cv_bridge`, `image_transport`
 
 ## 📦 ROS Packages
-___
 
 ```bash
 roscpp rospy tf2 tf2_ros tf2_geometry_msgs \
@@ -101,7 +99,6 @@ jsk_rviz_plugins
 
 
 ## 🏗️ Gazebo Models
-___
 
 - **Gazebo Official Models**
 - **Customized Models**
@@ -109,7 +106,7 @@ ___
 
 
 ## 🔧 Installation
-___
+
 
 ```bash
 # Clone the repository
@@ -142,7 +139,7 @@ cp -r ME5413_Final_Project/src/me5413_world/models/* ~/.gazebo/models
 
 
 ## 🚀 How to Use
-___
+
 
 ### 0. Launch the Simulation World
 
@@ -182,7 +179,7 @@ Make sure `my_map.yaml` is loaded and AMCL is active.
 
 
 ## 🧪 Notable Features & Improvements
-___
+
 
 - **Cartographer-based Mapping**: Improved loop closure and global consistency.
 - **Custom Region Extraction**: Dynamic identification of semantic regions using occupancy grid and costmap analysis.
@@ -193,7 +190,7 @@ ___
 
 
 ## 📊 Trajectory Evaluation Using `evo`
-___
+
 
 
 <p align="center">
@@ -215,7 +212,7 @@ ___
 
 
 ## 🧩 Mission Execution Logic
-___
+
 
 1. **Initial Localization**  
    AMCL initializes localization via LiDAR scan matching using a pre-generated map.
@@ -240,7 +237,6 @@ ___
 
 
 ## 📄 Contribution Guidelines
-___
 
 We follow:
 
@@ -250,7 +246,6 @@ We follow:
 
 
 ## 📑 Full Project Report
-___
 
 For in-depth explanation and results, refer to:
 
@@ -259,6 +254,6 @@ For in-depth explanation and results, refer to:
 
 
 ## 📄 License
-___
+
 Released under the **MIT License**.
 
